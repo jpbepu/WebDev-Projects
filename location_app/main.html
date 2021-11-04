@@ -1,24 +1,31 @@
         <!DOCTYPE html>
 <html>
 <head>
-  <style media="screen">
-  .flexbox-item {
-    width: 300px;
-    height: 100px;
-    border-radius: 50px;
-    background-color:aquamarine;
-    padding: 30px;
-    align-items: center;
-    margin: 20px;
-  }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <style media="screen">
+        .flexbox-item {
+            border-radius: 50px;
+            background-color:aquamarine;
+            padding: 30px;
+            align-items: center;
+            margin: 20px;
+        }
 
-  .flexbox-item_2{
-      background-color:coral !important;
-  }
+        .flexbox-item_2{
+            background-color:coral !important;
+        }
 
-  .flexbox-container{
-      display:block;
-  }
+        .flexbox-container{
+            position:relative;
+            width: 50%;
+            align-content: center;
+        }
+
+    p{
+        font-family: 'Inconsolata', monospace;
+    }
 
 
   </style>
@@ -26,7 +33,7 @@
 <body>
     <div class="flexbox-container">
         <div class="flexbox-item flexbox-item_1">
-            <p>Click the button to get your coordinates.</p>
+            <p>Allow the browser to access your location in order to use the app</p>
         </div>
         <div class="flexbox-item flexbox-item_2">
             <p id="demo"></p>
