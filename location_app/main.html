@@ -5,7 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <style media="screen">
-        .flexbox-item {
+        .item {
             border-radius: 50px;
             background-color:aquamarine;
             padding: 30px;
@@ -13,17 +13,36 @@
             margin: 20px;
         }
 
-        .flexbox-item_2{
+        .item_2{
             background-color:coral !important;
+            display:flex;
         }
 
-        .flexbox-container{
-            position:relative;
+        .container{
+            display:relative;
+            margin: auto;
+            margin-top: 100px;
             width: 50%;
             align-content: center;
         }
 
-    p{
+    .flex-item{
+        width: auto;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .plug{
+        background-color: lightcoral;
+        width: 50px;
+        height: 50px;
+        border-top-left-radius: 20px;
+        position:fixed;
+        bottom:0%;
+        right:0%;
+    }
+
+    p {
         font-family: 'Inconsolata', monospace;
     }
 
@@ -31,12 +50,24 @@
   </style>
 </head>
 <body>
-    <div class="flexbox-container">
-        <div class="flexbox-item flexbox-item_1">
+    <div class="container">
+        <div class="item item_1">
             <p>Allow the browser to access your location in order to use the app</p>
         </div>
-        <div class="flexbox-item flexbox-item_2">
-            <p id="demo"></p>
+        <div class="item item_2">
+            <div class="flex-item">
+                <p id="demo"></p>
+            </div>
+            <div class="flex-item">
+                <p>This is your position</p>
+            </div>
+            <div class="flex-item">
+                <p>This is a random text</p>
+            </div>
+        </div>
+
+        <div class="plug">
+            <img src="https://dl.dropbox.com/s/knlhrc0etf6o4ys/idea.png?raw=1" alt="">
         </div>
 
     </div>
