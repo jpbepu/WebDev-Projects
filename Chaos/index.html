@@ -7,8 +7,9 @@
     <style>
       canvas{
         margin:auto;
+        border-radius: 30px;
         padding:10px;
-        border: 1px solid white;
+        border: 1px dotted white;
       }
       #title{
         color: white;
@@ -16,6 +17,15 @@
       }
       .navigation{
         color: red;
+      }
+
+      li{
+        font-family:monospace;
+      }
+
+      a{
+        color: azure;
+        text-decoration: none;
       }
     </style>
     <style>
@@ -32,11 +42,7 @@
     </nav>
     <h1 align='center' id='title'>Sierpisnki Triangle Generator</h1>
 
-    <div id='customize'>
-      <h3>No of iterations:</h3><h2 class='iterations'></h2>
-      <input type="text" class='iterations' value="">
 
-    </div>
       <p align='center'>
         <canvas id="canvas" width="500px" height="500px"></canvas>
       </p>
