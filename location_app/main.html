@@ -5,40 +5,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <style media="screen">
+
+        * {
+            box-sizing: border-box;
+        }
+
         .item {
-            border-radius: 50px;
+            box-shadow: 5px 5px rgb(133, 105, 255);
+            border-radius: 30px;
             background-color:aquamarine;
             padding: 30px;
-            align-items: center;
             margin: 10px;
         }
 
-        .item_2{
+        .item_2 {
             background-color:coral !important;
             display:flex;
         }
 
-        .container{
+        .container {
             position: relative;
             margin: auto;
             margin-top: 100px;
             width: 50%;
-            align-content: center;
+            align-items: center;
+            justify-content: center;
         }
 
-    .flex-container{
+        .flex-container {
         display: flex;
         justify-content: space-around;
         align-items: center;
         }
 
-    .flex-item{
+        .flex-item {
         width: auto;
         margin: auto;
         overflow: hidden;
-    }
+        }
 
-    .plug{
+        .plug {
         background-color: lightcoral;
         width: 50px;
         height: 50px;
@@ -46,16 +52,38 @@
         position:fixed;
         bottom:0%;
         right:0%;
-    }
+        }
 
-    p {
+        .frame {
+            background-color: transparent;
+            box-shadow: 10px 10px hotpink;
+            position: fixed;
+            top:5%;
+            bottom: 10%;
+            right: 7.5%;
+            left: 7.5%;
+            width: 85%;
+            height: 80%;
+            border-radius: 30px;
+            border: solid 5px greenyellow;
+        }
+
+        .scroll{
+            position: relative;
+            height: 200vh;
+        }
+
+        p {
         font-family: 'Inconsolata', monospace;
-    }
+        }
 
 
   </style>
 </head>
 <body>
+    <div class="frame">
+    </div>
+    
     <div class="flex-container">
         <div class="container">
             <div class="item item_1">
@@ -84,6 +112,10 @@
         </div>
     </div>
     
+    <div class="scroll">
+
+    </div>
+
 <script src="script.js" charset="utf-8"></script>
 
 </body>
