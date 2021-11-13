@@ -28,35 +28,174 @@ html {
     */
 
 
-.box{
-  background-color: aliceblue;
-  font-family: monospace;
-  font-size: larger;
-  position: relative;
+body{
+
+  background-image: linear-gradient(rgb(245, 230, 233), slateblue);  margin: auto;
+
 }
+
+.box{
+
+  display: block;
+  background-color: aliceblue;
+  padding: 20px;
+  margin: 5vh auto;
+  border-radius: 2rem;
+  width: 50vw;
+  font-family: monospace;
+  font-size: 1rem;
+  position: relative;
+
+}
+
 
 .item{
-  position:absolute;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 10px;
   width: 40vw;
   height: 3rem;
   min-width: 20vw;
   min-height: 2rem;
+  margin: 0 auto 20px;
+
   background-color: aqua;
-  text-align: center;
+  box-shadow: 10px 10px rgb(0, 160, 160);
+
+  transition: transform 0.2s;
+
+  animation-iteration-count: infinite;
 
 }
 
-.item-shadow{
-  position:absolute;
+.item-1{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
   border-radius: 10px;
-  left: 10px;
-  top: 10px;
   width: 40vw;
   height: 3rem;
   min-width: 20vw;
   min-height: 2rem;
-  background-color:rgb(0, 196, 196);
-  z-index: -1
-  ;
+  margin: 0 auto 20px;
+
+  background-color: rgb(207, 190, 193);
+  box-shadow: 10px 10px rgb(221, 112, 130);
+
+  transition: transform 0.2s;
+  filter: blur(2px);
+  animation-fill-mode: forwards;
+
+}
+
+.item-2{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  width: 40vw;
+  height: 3rem;
+  min-width: 20vw;
+  min-height: 2rem;
+  margin: 0 auto 20px;
+
+  background-color:slateblue;
+  box-shadow: 10px 10px rgb(61, 49, 138);
+
+
+  transition: transform 0.2s;
+  animation-fill-mode: forwards;
+
+  
+}
+
+.item-3{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  width: 40vw;
+  height: 3rem;
+  min-width: 20vw;
+  min-height: 2rem;
+  margin: 0 auto 20px;
+
+  background-color:orangered;
+  box-shadow: 10px 10px rgb(156, 57, 21);
+  color: aliceblue;
+
+
+  transition: transform 0.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+  
+}
+
+.item:hover{
+
+  transform:scale(1.2, 1.2);
+  animation-name: pop;
+  animation-duration: 0.2s;
+
+}
+
+.item-1:hover{
+
+  transform:scale(1.2, 1.2);
+  animation-name: blur;
+  animation-duration: 0.2s;
+  
+}
+
+.item-2:hover{
+
+  transform:scale(1.2, 1.2);
+  animation-name: invert;
+  animation-duration: 0.2s;
+  
+}
+
+.item-3:hover{
+
+  transform:scale(1.2, 1.2);
+  animation-name: font;
+  animation-duration: 0.5s;
+  
+}
+
+
+@keyframes pop {
+
+  0% {color:black;}
+  50% {color:greenyellow;}
+  100% {color:black;}
+
+}
+
+@keyframes blur {
+  from{filter: blur(2px);}
+  to{filter: blur(0px);}
+}
+
+@keyframes invert {
+  from{filter: invert(0);}
+  to{filter: invert(1);}
+}
+
+@keyframes font {
+  0% {font-family: monospace;}
+  25% {font-family: fantasy;}
+  50% {font-family: cursive;}
+  75% {font-family: fantasy;}
+  100% {font-family: monospace;}
 }
