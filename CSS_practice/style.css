@@ -58,9 +58,10 @@ body{
   border-radius: 10px;
   width: 40vw;
   height: 3rem;
-  min-width: 20vw;
+  min-width: 100px;
   min-height: 2rem;
   margin: 0 auto 20px;
+
 
   background-color: aqua;
   box-shadow: 10px 10px rgb(0, 160, 160);
@@ -140,6 +141,10 @@ body{
 
   
 }
+
+
+
+
 
 .item:hover{
 
