@@ -143,6 +143,34 @@ body{
 }
 
 
+.item-4{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  width: 40vw;
+  height: 3rem;
+  min-width: 20vw;
+  min-height: 2rem;
+  margin: 0 auto 20px;
+
+  background-color:rgb(255, 41, 41);
+  box-shadow: 10px 10px rgb(156, 21, 21);
+  color: aliceblue;
+
+
+  transition: transform 0.2s;
+  animation-fill-mode: forwards;
+  /*
+  animation-iteration-count: infinite;
+  */
+
+  
+}
+
+
 
 
 
@@ -178,6 +206,14 @@ body{
   
 }
 
+.item-4:hover{
+
+  transform:translateX(10px);
+  animation-duration: 0.2s;
+
+
+}
+
 
 @keyframes pop {
 
@@ -204,3 +240,4 @@ body{
   75% {font-family: fantasy;}
   100% {font-family: monospace;}
 }
+
