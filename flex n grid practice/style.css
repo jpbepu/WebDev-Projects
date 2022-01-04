@@ -1,0 +1,175 @@
+body{
+
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.7rem;
+
+}
+
+.title{
+
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/*------GRID LAYOUT-----*/
+
+.grid{
+
+    display:grid;
+    background-color: beige;
+    margin: auto;
+    padding: 40px;
+    overflow: hidden;
+
+    /*grid-gap : row, column;*/
+    grid-gap: 10px 10px;
+
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-content: center;
+
+}
+
+
+.grid-content{
+
+    height: 100%;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    grid-template-columns: 35px auto;
+    overflow: hidden;
+
+}
+
+.grid-item {
+    
+    height: 150px;
+    background-color: white;
+    max-width: 30vw;
+    overflow: hidden;
+    padding: 5px;
+    transition: transform 0.3s;
+    transform: scale(1, 1);
+
+  }
+
+.grid-thumb{
+
+    background-color: coral;
+
+    grid-column: 1/3;
+
+}
+
+.grid-photo{
+    margin: 5px;
+    background-color: crimson;
+    height: 25;
+    border-radius: 100%;
+}
+
+.grid-text{
+
+    padding: 5px;
+
+
+}
+
+.grid-item:hover{
+
+    transition: transform 0.3s;
+    transform: scale(1.05, 1.05);
+
+}
+
+  /*-------FLEX LAYOUT--------*/
+
+  .flex{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    background-color: cadetblue;
+    margin: auto;
+
+
+}
+
+
+.flex-item {
+    
+    margin: 20px;
+    height: 300px;
+    width:200px;
+    background-color: white;
+    
+    /*----default animation state----*/
+    transition: transform 0.3s;
+    transform: scale(1, 1);
+
+
+}
+
+
+.flex-content{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    flex-direction: column;
+
+}
+
+
+.flex-photo{
+    
+    background-color: mediumspringgreen;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    border-radius: 50px;
+
+}
+
+.flex-text{
+
+    color: honeydew;
+    height: 40%;
+    width: 100%;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: inherit;
+
+}
+
+
+.flex-icons{
+
+    display: inline-flex;
+    position: relative;
+    margin: auto;
+    height:10%;
+
+}
+
+.icon{
+
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: auto 7px;
+    background-color: honeydew;
+
+}
+
+.flex-item:hover{
+
+    transition: transform 0.3s;
+    transform: scale(1.05, 1.05);
+
+}
