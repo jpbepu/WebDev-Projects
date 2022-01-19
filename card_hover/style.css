@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+
+body{
+    
+    background-color: rgb(241, 241, 241);
+}
+
+
+/*---------------card-------------------*/
+
+
+.card{
+    position: relative;
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(0, 0, 0);
+    transition: 300ms;
+    overflow: hidden;
+}
+
+img{
+    position: absolute;
+    width: 300px;
+    opacity: 1;
+    transition: 300ms;
+    transform: translateY(0px);
+}
+
+.text{
+    color:white;
+    position: absolute;
+    padding: 10%;
+    transform: translateY(50%);
+    transition: ease 300ms;
+    opacity: 0;
+}
+
+.text::after{
+    content: 'Lorem ipsum';
+    color: white;
+    display: block;
+
+}
+
+.card:hover img{
+    opacity: 0.5;
+    transform: translateY(-5px);
+}
+
+.card:hover .text{
+    opacity: 1;
+    transform: translateY(40%);
+}
+
+
+
+
+
+
+
+
+
