@@ -11,20 +11,20 @@ body{
 }
 
 .button{
-    color: rgb(59, 59, 59);
+
+    color: salmon;
     height: 100px;
     width: 100px;
-    top: 200px;
+    top: 10vh;
     position: absolute;
-    border-radius: 50px;
-    background-color: salmon;
+    border-radius: 100px;
+    border: 1px solid salmon;
+    background-color: rgba(250, 128, 114, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family:monospace;
 }
-
-
 
 .back-bar{
     height: 10px;
@@ -50,6 +50,8 @@ body{
 
 /*---hover---*/
 
+
+
 .button:hover ~ .back-bar {
 
     animation-name: bar-animation;
@@ -72,6 +74,8 @@ body{
 
 
 /*---animations---*/
+
+
 
 @keyframes bar-animation{
     0%{width: 0px;}
