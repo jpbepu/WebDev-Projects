@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Source+Sans+Pro:wght@400;700&display=swap');
+
+
+body{
+    
+    background-color: rgb(255, 231, 224);
+}
+
+
+/*---------------card-------------------*/
+
+
+.container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    transition: 300ms;
+    overflow: hidden;
+
+}
+
+.peach{
+    background-color: rgb(173, 78, 0);
+}
+
+.mint{
+    background-color: rgb(2, 146, 33);
+}
+
+.banana{
+    background-color: rgb(206, 209, 0);
+}
+
+.blueberry{
+    background-color: rgb(43, 23, 156);
+}
+
+img{
+    margin: auto;
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    transition: 300ms;
+    transform: translateY(0px);
+}
+
+.text{
+    color:white;
+    position: absolute;
+    padding: 10%;
+    top:-50px;
+    transform: translateY(50%);
+    transition: ease 300ms;
+    opacity: 0;
+    font-family: 'DM Serif Text', serif;
+    line-height: 0.9;
+}
+
+.text::after{
+    content: 'SAIBA MAIS';
+    font-family:monospace;
+    color: white;
+    display: block;
+
+}
+
+.card:hover img{
+    opacity: 0.5;
+    transform: translateY(-5px);
+}
+
+.card:hover .text{
+    opacity: 1;
+    transform: translateY(40%);
+}
+
+
+
+
+
+
+
