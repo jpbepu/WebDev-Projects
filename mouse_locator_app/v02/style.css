@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    overflow: hidden;
+
+    /*-----hides cursor----
+
+    cursor:none;
+
+    */
+}
+
+#bg{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgb(238, 196, 255);
+
+}
+
+p{
+    position:absolute;
+    margin: 10px;
+    font-family: monospace;
+    pointer-events: none;
+
+}
+
+#dot, #dot1, #dot2{
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 60%;
+}
+
+#dot{
+        transition: 50ms;
+        background-color: rgb(190, 135, 222);
+}
+
+#dot1{
+        transition: 75ms;
+        background-color: rgb(180, 97, 228);
+}
+
+#dot2{
+        transition: 100ms;
+        background-color: rgb(154, 45, 218);
+}
+

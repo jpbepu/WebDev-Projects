@@ -51,7 +51,9 @@ function randomHexa(){
     console.log(hexaNum);
   }
   return '#' + hexaNum.join('');
-};//generates random hexadec color
+};
+
+//generates random hexadec color
 //----------------------------------
 ctx.fillStyle = "#FF0000"; //set graph color
 

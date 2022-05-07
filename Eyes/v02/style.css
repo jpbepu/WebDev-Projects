@@ -1,0 +1,128 @@
+:root {
+    --eye-size: 70px;
+    --main-color:rgb(209, 255, 81) ;
+}
+
+
+body{
+    margin: 0;
+    overflow: hidden;
+    cursor:none;
+}
+
+img{
+    user-select: none;
+    z-index: 10;
+}
+
+p{
+    font-family: monospace;
+    pointer-events: none;
+    padding: 5px;
+    margin: 5px 5px;
+}
+
+h1{
+    text-align: center;
+    height: 35px;
+    display: inline-block;
+    background-color: var(--main-color);
+    padding: 5px;
+    font-family: monospace;
+    margin: 20px 0 0 0;
+}
+
+.bingus{
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    z-index: 10;
+}
+
+#dot{
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    background-color: brown;
+    position: absolute;
+    border-radius: 60%;
+    z-index: 10;
+}
+
+#bg{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.eye-container{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 310px;
+    height: 310px;
+    border-radius: 51%;
+    top: 90px;
+    left: 565px;
+    z-index: -10;
+}
+
+.eye{
+    width: var(--eye-size);
+    height: var(--eye-size);
+    border-radius: 60%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px rgb(214, 177, 191) inset;
+}
+
+.iris{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 25%;
+    left: 45%;
+    width: 50%;
+    height: 50%;
+    transform: scale(1.5);
+    background-image: radial-gradient(rgb(158, 190, 68) 55%, var(--main-color) 10%);
+    border-radius: 51%;
+}
+
+.pupil{
+    width: 20px;
+    height: 20px;
+    border-radius: 51%;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+
+.shine-l, .shine-r{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-image: linear-gradient(rgb(255, 255, 255) 70%,rgba(255, 255, 255, 0.7));
+    z-index: 1000;
+    border-radius: 51%;
+
+}
+
+.shine-l{
+    left: 75px;
+    top: 137px;
+}
+
+.shine-r{
+    left: 240px;
+    top: 137px;
+}
+
+

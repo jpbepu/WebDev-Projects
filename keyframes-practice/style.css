@@ -1,0 +1,125 @@
+body{
+    background-color: rgb(59, 59, 59);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.button{
+
+    color: salmon;
+    height: 100px;
+    width: 100px;
+    top: 10vh;
+    position: absolute;
+    border-radius: 100px;
+    border: 1px solid salmon;
+    background-color: rgba(250, 128, 114, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:monospace;
+}
+
+.back-bar{
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgb(102, 83, 87);
+    animation-fill-mode:both;
+}
+
+.circle{
+    position: absolute;
+    background-color: snow;
+    border-radius: 200px;
+    transition: transform 0.2s;
+}
+
+.idea{
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+
+
+
+/*---hover---*/
+
+
+
+.button:hover ~ .back-bar {
+
+    animation-name: bar-animation;
+    animation-duration: 10s;
+}
+
+.button:hover ~ .circle{
+    animation-name: circle;
+    animation-duration: 15s;
+    animation-delay: 0.5s;
+}
+
+.button:hover ~ .idea{
+    animation-name: icon;
+    animation-duration: 3s;
+    animation-delay: 3.7s;
+    animation-fill-mode: both;
+}
+
+
+
+/*---animations---*/
+
+
+
+@keyframes bar-animation{
+    0%{width: 0px;}
+    5%{width: 400px;}
+    99%{display: block;}
+    100%{display: none;}
+}
+
+@keyframes circle{
+    0%{width: 0px;
+       height: 10px;}
+    7%{width: 200px;}
+    10%{width: 250px;}
+    15%{width: 300px;}
+    19%{width: 400px;}
+    21%{width: 400px;
+        height: 10px;
+        transform: scale(1,1);
+        background-color: snow;
+        box-shadow:  0px 0px 30px rgba(42, 172, 107, 0);}
+    22%{width: 100px;
+        height: 100px;
+        transform: scale(0.9 , 1.1) ;
+        background-color: rgba(42, 172, 107, 1);
+        box-shadow:  0px 0px 30px rgba(42, 172, 107, 1);}
+    23%{transform: scale(1.05 , 0.95);}
+    24.5%{transform: scale(0.95 , 1.05);}
+    26%{transform: scale(1 , 1);}
+    28%{transform: scale(1 , 1);}
+    40%{transform: scale(1 , 1);
+        background-color: rgba(42, 172, 107, 1);}
+    42%{transform: scale(0,0);
+        background-color: rgba(42, 172, 107,0);}
+}
+
+@keyframes icon{
+    0%{opacity: 0;
+       transform: scale(0,0);}
+    10%{opacity: 1;
+        transform: scale(1,1);}
+    20%{filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0));}
+    25%{filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 1));}
+    90%{transform: scale(1,1);
+        opacity: 1;}
+    100%{transform: scale(0,0);
+        opacity: 0;}
+}
