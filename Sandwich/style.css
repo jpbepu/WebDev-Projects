@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Mochiy+Pop+One&family=Pacifico&family=Rubik:wght@600&family=Sniglet&display=swap');
+
+/*
+font-family: 'Dosis', sans-serif;
+font-family: 'Mochiy Pop One', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Rubik', sans-serif;
+font-family: 'Sniglet', cursive;
+*/
+
+body{
+
+    display: flex;
+    margin: 0;
+    
+
+}
+
+
+.toolbar{
+
+    background-color: #8BB4D9;
+    min-width: 300px;
+    width: 30%;
+    height: 100vh;
+
+
+}
+
+.toolbar-container{
+
+    margin: 10px;
+    background-color: #f79797;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: #dd7474a1 10px 10px;
+}
+
+.header{
+
+    padding: 10px;
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+.main{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8BB4D9;
+    width: 70%;
+    height: 100vh;
+
+
+}
+
+#food-container{
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: #F2CC85;
+    width: 70%;
+    height: 70%;
+    border-radius: 50px;
+
+    animation-iteration-count: infinite;
+
+}
+
+
+#food-container *{
+
+    animation: foodDrop 1s ease;
+
+}
+
+#bottom{
+
+    position: absolute;
+    bottom: 0;
+}
+
+
+.button-container{
+
+    background-color: #dd7474;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+
+
+}
+
+.button-container button{
+
+
+    min-width: 45%;
+    min-height: 100px;
+    max-width: 45%;
+    max-height: 100px;
+
+    border: none;
+    border-radius: 15px;
+    margin: 5px;
+    background-color: #ffeef5;
+    padding: 5px;
+
+    font-family: 'Sniglet', cursive;
+    box-shadow: 5px 5px rgba(55, 27, 131, 0.253);
+
+
+}
+
+.button-container button:active{
+
+    box-shadow: 3px 3px rgba(55, 27, 131, 0.253);
+    transform: translate(2px, 2px);
+
+}
+
+.button-container button img{
+
+    max-width: 80%;
+    max-height: 80%;
+
+
+}
+
+#start-over{
+
+    width: 98%;
+    height: 70px;
+
+    border: none;
+    border-radius: 10px;
+    font-family: 'Sniglet', cursive;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px rgba(55, 27, 131, 0.253);
+    
+    margin: 20px 0 20px 0;
+
+}
+
+#start-over:active{
+
+    box-shadow: 3px 3px rgba(55, 27, 131, 0.253);
+    transform: translate(2px, 2px);
+
+}
+
+
+@keyframes foodDrop {
+
+    0%{
+        transform: translateY(-1000px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+

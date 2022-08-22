@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="header">Incremental game v1</div>
+
+<div class="container">
+
+
+    <div class="resources"> 
+
+        <p class="puzzlePiece">Puzzle pieces<br>
+            <span id="puzzlep"></span><br>
+            
+        </p>
+
+        <p class="completedPuzzle">Completed Puzzles<br>
+            <span id="puzzle"></span><br>
+            
+        </p>
+
+        <p class="gold">Gold<br>
+            <span id="gold">0</span><br>
+        
+        </p>
+
+        <p class="detectives">Detectives<br>
+            <span id="detect"></span>
+
+            <span class="per-sec">
+
+                <span>pc / 3 sec</span>
+            </span>
+
+</span>
+        </p>
+
+    </div>
+
+    <div class="main">
+       
+        <br>
+        <button id="assemblePuzzle">Assemble Pieces</button>
+
+        <button id="sellPuzzle">Sell Puzzle</button>
+
+        <button id="clicker"> <span class="material-icons md-48">
+            extension
+            </span> </button>
+
+        <button id="findPiece">Hire piece Detective<br>(20 gold)</button>
+
+    </div>
+
+    <div class="log">
+        <p>log</p>
+        <button id="clearLog">clear log</button>
+            <div id="log-container">
+                
+                <!---log messages--->
+                <p>Welcome!</p>
+            </div>
+    </div>
+</div>
+
+
+
+
+
+        
+        <script src="app.js"></script>
+    </body>
+</html>

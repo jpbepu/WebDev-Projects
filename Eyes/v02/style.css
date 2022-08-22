@@ -1,42 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
 :root {
     --eye-size: 70px;
-    --main-color:rgb(209, 255, 81) ;
+    font-family: 'Indie Flower', cursive;
 }
-
 
 body{
     margin: 0;
     overflow: hidden;
     cursor:none;
+    background-image: linear-gradient(#21F0FE, #1EE6BA);
+}
+
+.warning{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: aquamarine;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+
+}
+
+.warning p{
+    font-size: large;
+    font-weight: bold;
 }
 
 img{
     user-select: none;
-    z-index: 10;
 }
 
 p{
-    font-family: monospace;
+    font-family: 'Patrick Hand', cursive;
     pointer-events: none;
     padding: 5px;
     margin: 5px 5px;
 }
 
-h1{
-    text-align: center;
-    height: 35px;
-    display: inline-block;
-    background-color: var(--main-color);
-    padding: 5px;
-    font-family: monospace;
-    margin: 20px 0 0 0;
+.infos{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding-top: 50px;
+
 }
 
-.bingus{
+#text{
+    display: none;
+}
+
+h1{
+    text-align: center;
+    height: 50px;
+    display: inline-block;
+    background-color: rgb(209, 152, 77);
+    padding: 15px 0px;
+    font-family: 'Patrick Hand', cursive;
+    margin: 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 5px;
+    box-shadow: rgb(238, 180, 105) 0px -5px;
+}
+
+
+button{
+    width: 60%;
+    padding: 4px;
+    background-color: rgb(161, 109, 40) ;
+    border: transparent;
+    border-bottom-right-radius: 7px ;
+    font-family: 'Patrick Hand', cursive;
+    box-shadow: rgba(0, 0, 0, 0.144) 0px 3px 2px inset;
+
+
+}
+
+.bingus-container{
     position: absolute;
     max-width: 100%;
-    height: auto;
+    height: 70vh;
     z-index: 10;
+    bottom: 0;
 }
 
 #dot{
@@ -47,7 +99,7 @@ h1{
     background-color: brown;
     position: absolute;
     border-radius: 60%;
-    z-index: 10;
+    z-index: 100;
 }
 
 #bg{
@@ -55,11 +107,9 @@ h1{
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .eye-container{
@@ -93,7 +143,7 @@ h1{
     width: 50%;
     height: 50%;
     transform: scale(1.5);
-    background-image: radial-gradient(rgb(158, 190, 68) 55%, var(--main-color) 10%);
+    background-image: radial-gradient(rgb(158, 190, 68) 55%, rgb(221, 245, 156) 10%);
     border-radius: 51%;
 }
 
@@ -109,10 +159,9 @@ h1{
     position: absolute;
     width: 15px;
     height: 15px;
-    background-image: linear-gradient(rgb(255, 255, 255) 70%,rgba(255, 255, 255, 0.7));
+    background-image: linear-gradient(rgb(255, 255, 255) 20%,rgba(255, 255, 255, 0.5));
     z-index: 1000;
     border-radius: 51%;
-
 }
 
 .shine-l{
@@ -126,3 +175,11 @@ h1{
 }
 
 
+/*media queries*/
+
+@media screen and (max-width: 940px) {
+    .warning{
+        visibility: visible;
+        opacity: 1;
+    }
+  }

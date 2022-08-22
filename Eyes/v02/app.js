@@ -1,11 +1,12 @@
 
 //=========VARIABLES============//
 
-//upper text
+//debug button
+const debug = document.getElementById('debug');
+
+//debug text
 var text = document.getElementById('text');
-//mouse pointer
-var pointerX;
-var pointerY;
+
 //pointer dot
 var dot = document.getElementById("dot");
 var dotX;
@@ -18,6 +19,16 @@ var eyeSize = String(getComputedStyle(document.querySelector(':root')).getProper
 var eyesOffset = Math.floor(eyeSize) - 15 ;
 
 //================================//
+
+//debug button
+debug.onclick = () => {
+    
+    if (text.style.display === "none") {
+      text.style.display = "block";
+    } else {
+      text.style.display = "none";
+    }
+}
 
 
 //get mouse coordinates on variables (pointer x coord. / pointer y coord.)
@@ -37,8 +48,8 @@ function pointerCheck(dot) {
     dot.style.marginLeft = dotX;
 
     //writes coords on top text
-    var coords = "X coord: " + pointerX + ", Y coord: " + pointerY
-    text.innerText = coords;
+    var coords = "X coord: " + pointerX + "<br> Y coord: " + pointerY
+    text.innerHTML = coords;
 }
 
 //calculates angle relative to cursor
