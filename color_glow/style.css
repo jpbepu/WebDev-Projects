@@ -1,19 +1,28 @@
 
 
 body{
+    position: relative;
     font-family: monospace;
     display: flex;
+    background-color: rgba(255, 99, 71, 0.096);
 }
 
+h1{
+    position: absolute;
+    font-family: 'Nixie One', cursive;
+
+}
 
 .container{
 
     position: relative;
     display: grid;
-
+    padding: 50px;
     margin:auto;
     width:70vw;
     background-color: white;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 30px rgba(255, 99, 71, 0.425);
     grid-template-columns: auto auto;
     grid-gap: 50px;
 
@@ -42,23 +51,39 @@ body{
 .item:hover{
 
     transition: box-shadow, transform  0.3s;
-    transform: scale(1.2, 1.2);
+    transform: scale(1.1, 1.1);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.966);
 
 }
 
 .orange:hover{
-    box-shadow: 0px 0px 30px rgb(255, 136, 0);
+    box-shadow: 0px 0px 30px orange;
 }
 
 .blue:hover{
-    box-shadow: 0px 0px 30px rgba(0, 68, 255, 0.966);
+    box-shadow: 0px 0px 30px blue;
 }
 
 .green:hover{
-    box-shadow: 0px 0px 30px rgb(179, 255, 0);
+    box-shadow: 0px 0px 30px greenyellow;
 }
 
 .red:hover{
-    box-shadow: 0px 0px 30px rgb(255, 0, 0);
+    box-shadow: 0px 0px 30px red;
+}
+
+#orange{
+    color: orange;
+}
+
+#blue{
+    color: blue;
+}
+
+#green{
+    color: greenyellow;
+}
+
+#red{
+    color: red;
 }
