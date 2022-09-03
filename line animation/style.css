@@ -1,0 +1,54 @@
+body{
+    height: 500vh;
+
+}
+
+.line-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+
+
+}
+
+svg{
+    display: block;
+
+    width: 100%;
+}
+
+
+section{
+
+     height: 100%;
+     display: grid;
+     place-content: center;
+     font-size: 4em;
+
+}
+
+.one{
+    background-color: bisque;
+    background-size: cover;
+}
+
+.two{
+    font-size: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+p{
+
+    position: absolute;
+    z-index: -1;
+    color: rgb(0, 0, 0);
+    top: 10%;
+    left :20%;
+    white-space: nowrap;
+    font-size: 30rem;
+
+}

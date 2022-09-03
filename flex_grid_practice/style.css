@@ -2,6 +2,7 @@ body{
 
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.7rem;
+    margin: 0;
 
 }
 
@@ -17,12 +18,12 @@ body{
 
     display:grid;
     background-color: beige;
-    margin: auto;
+
     padding: 40px;
     overflow: hidden;
 
     /*grid-gap : row, column;*/
-    grid-gap: 10px 10px;
+    grid-gap: 20px 20px;
 
     grid-template-columns: auto auto;
     align-content: center;
@@ -38,6 +39,8 @@ body{
     grid-template-rows: 60% 40%;
     grid-template-columns: 35px auto;
     overflow: hidden;
+    border-radius: 10px;
+
 
 }
 
@@ -50,6 +53,7 @@ body{
     padding: 5px;
     transition: transform 0.3s;
     transform: scale(1, 1);
+    border-radius: 10px;
 
   }
 
@@ -78,7 +82,7 @@ body{
 .grid-item:hover{
 
     transition: transform 0.3s;
-    transform: scale(1.05, 1.05);
+    transform: scale(1.03, 1.03);
 
 }
 
@@ -102,7 +106,8 @@ body{
     margin: 20px;
     height: 300px;
     width:200px;
-    background-color: white;
+
+
     
     /*----default animation state----*/
     transition: transform 0.3s;
@@ -122,6 +127,7 @@ body{
     height: 100%;
     padding: 10px;
     flex-direction: column;
+    border-radius: 10px;
 
 }
 

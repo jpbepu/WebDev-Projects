@@ -32,7 +32,7 @@ body{
     width: 100vw;
     height: 100vh;
     padding: 0;
-    background-color: rgb(255, 253, 225);
+    background-color: rgb(221, 221, 221);
     
 }
 
@@ -42,7 +42,7 @@ body{
 .resources{
 
     font-family: 'Mochiy Pop One', sans-serif;
-    background-color: #f7f7f7;
+    background-color: #c2bec0;
     width: 30%;
     min-width: 200px;
     height: 100%;
@@ -64,19 +64,17 @@ body{
 .lemon-pbar-container{
     background-color: #95a7fa;
     height: 50px;
-    width: 400px;
-    padding: 7px;
+    width: 80%;
 
-    border-top-left-radius: 0;
+    border-radius: 5px;
 }
 
 #lemon-pbar{
 
     background-color: #e2f288;
     height: 100%;
-    left: 0;
-
-;
+    border-radius: 10px;
+    transform: scaleY(0.9) scaleX(0.97);
 
 }
 
@@ -110,18 +108,14 @@ button{
     font-family: 'Sniglet', cursive;
     font-size: 1rem;
 
-
-    border: solid 5px #95a7fa;
-    border-bottom: 0;
-
     border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border: 0;
+
 
     padding: 10px;
     min-height: 30px;
 
-    background-color: rgb(241, 238, 7);
+    background-color: aliceblue;
 
 }
 
