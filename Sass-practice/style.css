@@ -1,0 +1,45 @@
+/*    mixins   */
+/*--------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body .bg {
+  width: 100vw;
+  height: 100vh;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .bg .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(44, 180, 117);
+  padding: 10px;
+  width: 400px;
+  height: 300px;
+}
+body .bg .container .logo {
+  position: absolute;
+  top: 5px;
+  width: 200px;
+  height: 300px;
+  background-color: rgb(97, 86, 71);
+}
+body .bg .container .card {
+  width: 80%;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+body .bg .container .card form {
+  background-color: aqua;
+  flex-direction: column;
+}
+body .bg .container .card form input {
+  margin: 0;
+  margin-top: 10px;
+}/*# sourceMappingURL=style.css.map */

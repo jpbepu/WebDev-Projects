@@ -1,0 +1,108 @@
+
+
+/*    mixins   */
+@mixin flexCenter() {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+/*--------------------------*/
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+
+    .bg{
+        width: 100vw;
+        height: 100vh;
+        background-color: aquamarine;
+        @include flexCenter();
+
+        
+        .container{
+
+            @include flexCenter();
+            
+            flex-direction: column;
+            background-color: rgb(44, 180, 117);
+    
+    
+            padding: 10px;
+    
+    
+            width: 400px;
+            height: 300px;
+    
+    
+    
+            .logo{
+    
+                position: absolute;
+                top :5px;
+                width: 200px;
+                height: 300px;
+                background-color: rgb(97, 86, 71);
+            }
+    
+    
+            .card{
+    
+    
+                width: 80%;
+                background-color: antiquewhite;
+    
+                padding: 10px;
+    
+    
+    
+    
+    
+    
+                form{
+                    background-color: aqua;
+                    flex-direction: column;
+            
+                    input{
+                        margin: 0;
+                        margin-top: 10px;
+                    }
+            
+                }
+    
+    
+    
+    
+            }
+    
+    
+    
+    
+        }
+
+
+
+    }
+
+
+    
+
+}
+
+
+
+
+
+
+
+

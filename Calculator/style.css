@@ -1,56 +1,56 @@
-.calculator{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    padding: 10px;
-    margin:auto;
-    background-color: rgb(245, 238, 179);
-    border-radius: 10px;
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  padding: 10px;
+  margin: auto;
+  background-color: rgb(245, 238, 179);
+  border-radius: 10px;
 }
 
-button{
-    background-color: springgreen;
-    color:white;
-    width:40px;
-    height:40px;
-    border:none;
-    margin: 5px;
-    border-radius: 10px;
+button {
+  background-color: springgreen;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin: 5px;
+  border-radius: 10px;
 }
 
-.display{
-    padding:5px;
-    height:40px;
-    width:80%;
-    background-color: rgb(179, 226, 221);
-    border-radius: 10px;
+.display {
+  padding: 5px;
+  height: 40px;
+  width: 80%;
+  background-color: rgb(179, 226, 221);
+  border-radius: 10px;
 }
 
-.buttons, .operations{
-    width: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.buttons, .operations {
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.operations button{
-    background-color: rgb(228, 181, 228);
+.operations button {
+  background-color: rgb(228, 181, 228);
 }
 
-#zero{
-    width: 90px;
+#zero {
+  width: 90px;
 }
 
-#ce{
-    width: 90px;
+#ce {
+  width: 90px;
 }
 
-#equal{
-    background-color:turquoise
+#equal {
+  background-color: turquoise;
 }
 
-button:active{
-    background-color: teal !important;
-}
+button:active {
+  background-color: teal !important;
+}/*# sourceMappingURL=style.css.map */

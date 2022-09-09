@@ -1,0 +1,207 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*    mixins   */
+@mixin flexCenter() {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+$base-color: rgb(212, 227, 240) ;
+
+
+
+
+
+
+
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: $base-color ;
+
+
+    .bg{
+
+        height: 100vh;
+        width: 100vw;
+        @include flexCenter(); 
+
+        .container {
+
+            width: 500px;
+            height: 600px;
+    
+            padding: 20px;
+            border-radius: 20px;
+    
+            background-color: white;
+            box-shadow: 20px 20px 100px rgba(128, 128, 128, 0.527);
+
+
+    
+            header{
+    
+    
+                margin-bottom: 30px;
+
+    
+                    form{
+    
+                        @include flexCenter();
+                        justify-content: space-between;
+
+    
+                        .inputs{
+    
+                            width: 300px;
+                            padding-right: 30px;
+
+    
+                            input{
+    
+                                border-radius: 5px;
+                                border: 0;
+
+                                background-color: $base-color ;
+                                display: inline-block;
+
+                                margin-bottom: 11px;
+                                height: 70px;
+
+                                font-family: 'Roboto', sans-serif;
+            
+                            }
+
+
+
+        
+        
+                        }
+                        
+                        button{
+                            
+                            color: white;
+                            display: block;
+                            width: 100%;
+                            height: 80px;
+                            padding: 10px;
+                            background-color: coral;
+                            border: 0;
+                            border-radius: 16px;
+                            font-size: 1.2rem;
+
+                            &:active{
+                                background-color:rgb(250, 104, 51);
+                            }
+
+    
+    
+                        }
+                    }
+                
+            }
+    
+            .todo-list-container{
+
+
+                overflow-y: scroll;
+                scrollbar-width: thin;
+
+
+                height: 473px;
+
+                &::-webkit-scrollbar{
+
+                    width: 5px;
+
+                }
+
+                &::-webkit-scrollbar-button {
+                    display: none;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: rgb(177, 177, 177); 
+                    border-radius: 5px;
+                }
+                  
+
+
+
+
+
+    
+                table{
+                    
+
+                    border-collapse: collapse;
+                    width: 100%;
+
+                    tr {
+
+
+                        
+                        height: 50px;
+                        background-color: aliceblue;
+
+
+
+                        td {
+
+                            padding: 5px;
+                            border-bottom: solid 2px rgba(255, 127, 80, 0.308);
+                            border-radius: 5px;
+                            text-align: center;
+
+                            button{
+
+
+                                font-size: large;
+                                background-color: coral;
+                                color: white;
+                                border: 0;
+                                border-radius: 5px;
+                                width: 30px;
+                                height: 30px;
+
+                                &:active{
+                                    background-color: rgb(250, 104, 51);
+                                }
+
+                            }
+
+                        }
+
+                    }
+                    
+
+    
+    
+    
+                }
+    
+            }
+    
+        }
+
+
+    }
+
+
+}
