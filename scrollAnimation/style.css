@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body .scroll-tracker {
+  background-color: aqua;
+  position: fixed;
+  inset: 0 0 auto;
+  height: 10px;
+}
+body header {
+  height: 200vh;
+  width: 100%;
+  background-color: beige;
+}/*# sourceMappingURL=style.css.map */

@@ -43,7 +43,7 @@ body .bg .container header form .inputs input {
   background-color: rgb(212, 227, 240);
   display: inline-block;
   margin-bottom: 11px;
-  height: 70px;
+  height: 30px;
   font-family: "Roboto", sans-serif;
 }
 body .bg .container header form button {

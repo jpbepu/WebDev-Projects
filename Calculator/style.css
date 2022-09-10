@@ -1,54 +1,72 @@
-.calculator {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
-  padding: 10px;
-  margin: auto;
-  background-color: rgb(245, 238, 179);
-  border-radius: 10px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: fantasy;
+  color: black;
 }
 
-button {
-  background-color: springgreen;
+body section {
+  height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body section .calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 500px;
+  height: 650px;
+  background-color: coral;
+  border-radius: 20px;
+}
+body section .calculator #display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 5px;
+  height: 150px;
+  width: 90%;
+  background-color: rgb(179, 226, 221);
+  border-radius: 10px;
+  font-size: 3rem;
+}
+body section .calculator #display #digits {
+  justify-content: space-between;
+}
+body section .calculator #display #digits span {
+  display: none;
+}
+body section .calculator .buttons-container {
+  height: 400px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+body section .calculator .buttons-container button {
+  background-color: rgb(77, 72, 72);
+  font-size: 2em;
   color: white;
-  width: 40px;
-  height: 40px;
   border: none;
   margin: 5px;
   border-radius: 10px;
 }
-
-.display {
-  padding: 5px;
-  height: 40px;
-  width: 80%;
-  background-color: rgb(179, 226, 221);
-  border-radius: 10px;
+body section .calculator .buttons-container #equal {
+  grid-row: 4/span 2;
+  grid-column-start: 4;
 }
-
-.buttons, .operations {
-  width: 150px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+body section .calculator .buttons-container #plus {
+  grid-row: 2/span 2;
+  grid-column-start: 4;
 }
-
-.operations button {
-  background-color: rgb(228, 181, 228);
-}
-
-#zero {
-  width: 90px;
-}
-
-#ce {
-  width: 90px;
-}
-
-#equal {
-  background-color: turquoise;
+body section .calculator .buttons-container #zero {
+  grid-row-start: 5;
+  grid-column: 1/span 2;
 }
 
 button:active {

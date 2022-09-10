@@ -1,55 +1,138 @@
-.calculator{
+
+
+
+
+@mixin flxCenter {
+
     display: flex;
-    flex-direction: column;
+
     justify-content: center;
     align-items: center;
-    width: 170px;
-    padding: 10px;
-    margin:auto;
-    background-color: rgb(245, 238, 179);
-    border-radius: 10px;
+    
 }
 
-button{
-    background-color: springgreen;
-    color:white;
-    width:40px;
-    height:40px;
-    border:none;
-    margin: 5px;
-    border-radius: 10px;
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: fantasy;
+    color: black;
 }
 
-.display{
-    padding:5px;
-    height:40px;
-    width:80%;
-    background-color: rgb(179, 226, 221);
-    border-radius: 10px;
+
+body{
+
+
+    section{
+
+        height: 100vh;
+
+        background-color: aliceblue;
+
+        @include flxCenter();
+
+        .calculator{
+
+            @include flxCenter();
+            flex-direction: column;
+            justify-content: space-around;
+
+            width: 500px;
+            height: 650px;
+
+
+            background-color: coral;
+            border-radius: 20px;
+    
+        
+            #display{
+
+                @include flxCenter();
+
+                margin: 20px;
+                padding:5px;
+                height:150px;
+                width:90%;
+                background-color: rgb(179, 226, 221);
+                border-radius: 10px;
+                font-size: 3rem;
+
+
+
+                #digits{
+
+                    justify-content: space-between;
+
+                    span{
+                        
+                        display: none;
+                        
+                    }
+
+                }
+
+
+
+        
+        
+            }
+        
+        
+            .buttons-container {
+
+                height: 400px;
+                width: 90%;
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+
+
+                button{
+
+                    background-color: rgb(77, 72, 72);
+
+                    font-size: 2em;
+                    color:white;
+
+                    border:none;
+                    margin: 5px;
+
+                    border-radius: 10px;
+
+                }
+
+                #equal{
+                    grid-row: 4 / span 2;
+                    grid-column-start: 4 ;
+                }
+
+                #plus{
+                    grid-row: 2 / span 2;
+                    grid-column-start: 4;
+                }
+
+                #zero{
+                    grid-row-start: 5 ;
+                    grid-column: 1 / span 2 ;
+
+                }
+
+
+
+            }
+        
+        
+        }
+
+    }
+
+
 }
 
-.buttons, .operations{
-    width: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.operations button{
-    background-color: rgb(228, 181, 228);
-}
 
-#zero{
-    width: 90px;
-}
-
-#ce{
-    width: 90px;
-}
-
-#equal{
-    background-color:turquoise
-}
 
 button:active{
     background-color: teal !important;

@@ -10,34 +10,41 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
-        <div class="calculator">
+        <section>
+            <div class="calculator">
 
-            <div class="display"></div>
-
-            <div class="operations">
-
-                <button id="plus">+</button>
-                <button id="minus">-</button>
-                <button id="mult">*</button>
-                <button id="division">/</button>
-                <button id="ce">CE</button>
-
+                <div id="display">
+                    <p id="digits">
+                        <span id="digit1"></span>
+                        <span id="op-digit"></span>
+                        <span id="digit2"></span>
+                        <span id="eq-digit">=</span>
+                        <span id="total"></span>
+                    </p>
+                </div>
+    
+                <div class="buttons-container">
+                    <button id="clear">C</button>
+                    <button id="divide">/</button>
+                    <button id="times">*</button>
+                    <button id="minus">-</button>
+                    <button id="seven">7</button>
+                    <button id="eight">8</button>
+                    <button id="nine">9</button>
+                    <button id="plus">+</button>
+                    <button id="four">4</button>
+                    <button id="five">5</button>
+                    <button id="six">6</button>
+                    <button id="one">1</button>
+                    <button id="two">2</button>
+                    <button id="three">3</button>
+                    <button id="zero">0</button>
+                    <button id="dot">.</button>
+                    <button id="equal">=</button>
+                </div>
             </div>
-            <div class="buttons">
-                <button id="one">1</button>
-                <button id="two">2</button>
-                <button id="three">3</button>
-                <button id="four">4</button>
-                <button id="five">5</button>
-                <button id="six">6</button>
-                <button id="seven">7</button>
-                <button id="eight">8</button>
-                <button id="nine">9</button>
-                <button id="zero">0</button>
-                <button id="equal">=</button>
-            </div>
-        </div>
+        </section>
+
 
         
         <script src="app.js" async defer></script>
