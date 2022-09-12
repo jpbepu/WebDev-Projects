@@ -1,24 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap");
 * {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
+  overflow-x: hidden;
 }
 
+body {
+  background: linear-gradient(0.5turn, #494949, #161616);
+}
 body section {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(68, 68, 68);
 }
 body section .app-wrapper {
   width: 85vw;
-  height: 85vh;
-  background-color: antiquewhite;
+  min-width: 950px;
+  max-width: 1250px;
+  height: 90vh;
   position: relative;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.253);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.453);
+  display: flex;
+  flex-direction: column;
 }
 body section .app-wrapper .main-container {
   border: solid 1px black;
@@ -26,48 +36,377 @@ body section .app-wrapper .main-container {
   height: 100%;
   position: relative;
   display: flex;
-  justify-content: space-around;
   flex-direction: row;
 }
 body section .app-wrapper .main-container .app-container-left {
   max-width: 240px;
   min-width: 240px;
-  height: 100%;
-  left: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: black;
 }
 body section .app-wrapper .main-container .app-container-left .left-links {
-  margin: 20px;
+  margin: 5px 0 0 20px;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  flex: 0 0 auto;
+}
+body section .app-wrapper .main-container .app-container-left .left-links h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  cursor: poi;
+}
+body section .app-wrapper .main-container .app-container-left .left-links ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+body section .app-wrapper .main-container .app-container-left .left-links ul li:hover {
+  opacity: 1;
+}
+body section .app-wrapper .main-container .app-container-left .left-links ul li img {
+  height: 32px;
+}
+body section .app-wrapper .main-container .app-container-left .left-links ul li p {
+  margin-left: 7px;
 }
 body section .app-wrapper .main-container .app-container-left .left-links p {
-  margin-bottom: 10px;
+  font-weight: 700;
 }
 body section .app-wrapper .main-container .app-container-left .left-playlists {
-  margin: 20px;
+  margin-left: 20px;
   border-top: solid 1px grey;
-  overflow: auto;
+  flex-grow: 1;
+  overflow-y: auto;
 }
-body section .app-wrapper .main-container .app-container-left .left-playlists p {
-  margin-top: 10px;
+body section .app-wrapper .main-container .app-container-left .left-playlists ul li {
+  margin-top: 20px;
+  cursor: pointer;
+  color: rgb(187, 187, 187);
 }
-body section .app-wrapper .main-container .app-container-left img {
-  width: 100%;
+body section .app-wrapper .main-container .app-container-left .left-playlists ul li:hover {
+  color: white;
+}
+body section .app-wrapper .main-container .app-container-left .left-playlists::-webkit-scrollbar {
+  width: 10px;
+  height: 15px;
+  background-color: #000;
+}
+body section .app-wrapper .main-container .app-container-left .left-playlists::-webkit-scrollbar-thumb {
+  background: #aaa;
+}
+body section .app-wrapper .main-container .app-container-left .img-container {
+  display: inline-block;
   height: 240px;
-  background-color: aliceblue;
+  width: 240px;
+  overflow: hidden;
+  flex: 0 0 auto;
 }
-body section .app-wrapper .main-container .app-container-center {
+body section .app-wrapper .main-container .app-container-left .img-container img {
   width: 100%;
   height: 100%;
-  background-color: rgb(20, 20, 20);
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-body section .app-wrapper .main-container .app-container-center .upper-container {
+body section .app-wrapper .main-container .app-container-right {
   width: 100%;
-  height: 50px;
+  position: relative;
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  flex-direction: column;
+}
+body section .app-wrapper .main-container .app-container-right .upper-container {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(0.25turn, #e66465, #9198e5);
+}
+body section .app-wrapper .main-container .app-container-right .upper-container .upper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+body section .app-wrapper .main-container .app-container-right .upper-container .upper-wrapper p {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section .app-wrapper .main-container .app-container-right .upper-container .upper-wrapper img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+body section .app-wrapper .main-container .app-container-right .upper-container .window-btn {
+  width: 150px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+body section .app-wrapper .main-container .app-container-right .upper-container .window-btn div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+body section .app-wrapper .main-container .app-container-right .upper-container .window-btn div img {
+  width: 50%;
+  height: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body section .app-wrapper .main-container .app-container-right .upper-container .window-btn div:hover {
+  background-color: rgba(83, 83, 83, 0.664);
+}
+body section .app-wrapper .main-container .app-container-right .upper-container .window-btn div:last-child:hover {
+  background-color: rgba(233, 42, 29, 0.952);
+}
+body section .app-wrapper .main-container .app-container-right .center-container {
+  margin-top: 70px;
+  flex: auto;
+}
+body section .app-wrapper .main-container .app-container-right .center-container::-webkit-scrollbar {
+  width: 10px;
+  height: 15px;
+  background-color: #000;
+}
+body section .app-wrapper .main-container .app-container-right .center-container::-webkit-scrollbar-thumb {
+  background: rgba(170, 170, 170, 0.562);
+}
+body section .app-wrapper .main-container .app-container-right .center-container .center-banner {
+  margin: 20px;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  height: 150px;
+}
+body section .app-wrapper .main-container .app-container-right .center-container h1 {
+  margin: 35px 0px 35px 20px;
+  font-size: 1.7em;
+  font-weight: 700;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .recent-items {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px 20px;
+  margin: 20px;
+}
+@media (min-width: 1400px) {
+  body section .app-wrapper .main-container .app-container-right .center-container .recent-items {
+    grid-template-columns: auto auto auto;
+  }
+}
+body section .app-wrapper .main-container .app-container-right .center-container .recent-items .recent-item {
+  min-width: 300px;
+  height: 100px;
+  background-color: rgba(240, 248, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: 0.3s;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .recent-items .recent-item:hover {
+  background-color: rgba(240, 248, 255, 0.3);
+}
+body section .app-wrapper .main-container .app-container-right .center-container .recent-items .recent-item img {
+  position: absolute;
+  width: 100px;
+  box-shadow: 5px 0px 10px rgba(54, 54, 54, 0.363);
+}
+body section .app-wrapper .main-container .app-container-right .center-container .recent-items .recent-item h3 {
+  font-weight: 400;
+  position: absolute;
+  left: 130px;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-header {
+  margin: 35px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-header h2 {
+  font-size: 1.7em;
+  font-weight: 700;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-header a {
+  text-decoration: none;
+  font-size: small;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-header a:hover {
+  color: rgb(199, 199, 199);
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-header * {
+  margin: 0px 20px;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card {
+  max-width: 220px;
+  max-height: 300px;
+  min-height: 200px;
+  background-color: rgba(240, 248, 255, 0.062);
+  border-radius: 7px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.332);
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card h4 {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card p {
+  color: rgb(136, 136, 136);
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card img {
+  width: 100%;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.332);
+  display: inline;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card .album {
+  border-radius: 5px;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card:hover {
+  background-color: rgba(240, 248, 255, 0.178);
 }
 body section .app-wrapper .app-footer {
-  position: absolute;
-  bottom: 0;
-  width: 85vw;
-  height: 95px;
+  width: 100%;
+  height: 120px;
   background-color: rgb(24, 24, 24);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+body section .app-wrapper .app-footer .current-song {
+  width: 240px;
+}
+body section .app-wrapper .app-footer .current-song .song-artist {
+  font-weight: 200;
+  font-size: 0.9em;
+}
+body section .app-wrapper .app-footer .current-song * {
+  margin: auto auto 10px 20px;
+}
+body section .app-wrapper .app-footer .playback {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body section .app-wrapper .app-footer .playback .playback-controls {
+  align-self: center;
+  display: flex;
+  align-items: center;
+}
+body section .app-wrapper .app-footer .playback .playback-controls img {
+  opacity: 0.7;
+  margin: auto 7px;
+  height: 25px;
+  width: 25px;
+}
+body section .app-wrapper .app-footer .playback .playback-controls img:hover {
+  opacity: 1;
+}
+body section .app-wrapper .app-footer .playback .playback-controls #play {
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+}
+body section .app-wrapper .app-footer .playback .playback-controls #play:hover {
+  opacity: 0.7;
+}
+body section .app-wrapper .app-footer .playback .timeline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body section .app-wrapper .app-footer .playback .timeline p {
+  font-size: small;
+}
+body section .app-wrapper .app-footer .playback .timeline .p-bar {
+  flex: 1 0 auto;
+  margin: 10px;
+  height: 5px;
+  position: relative;
+  background-color: rgb(88, 88, 88);
+  border-radius: 10px;
+}
+body section .app-wrapper .app-footer .playback .timeline .p-bar .p-bar-progress {
+  position: absolute;
+  width: 65%;
+  height: 5px;
+  background-color: rgb(219, 219, 219);
+  border-radius: 10px;
+}
+body section .app-wrapper .app-footer .extra-controls {
+  min-width: 200px;
+  width: 20%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body section .app-wrapper .app-footer .extra-controls img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 23px;
+  height: 23px;
+  margin-left: 10px;
+  opacity: 0.7;
+}
+body section .app-wrapper .app-footer .extra-controls img:hover {
+  opacity: 1;
+}
+body section .app-wrapper .app-footer .extra-controls .volume-bar-container {
+  flex: 1 0 auto;
+  margin: 5px;
+  height: 4px;
+  width: 40%;
+  position: relative;
+  background-color: rgb(88, 88, 88);
+  border-radius: 10px;
+}
+body section .app-wrapper .app-footer .extra-controls .volume-bar-container .volume-bar {
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background-color: aliceblue;
+}
+body section #credits {
+  font-size: small;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }/*# sourceMappingURL=style.css.map */

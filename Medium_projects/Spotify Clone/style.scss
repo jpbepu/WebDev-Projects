@@ -1,7 +1,6 @@
 
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap');
 
 @mixin flxCenter {
 
@@ -11,18 +10,36 @@
     
 }
 
+@mixin border {
+    
+    border: solid 1px red;
+}
+
 
 
 *{
+
+    font-family: 'Raleway', sans-serif;
+
+    font-weight: 400;
+
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    color: white
+    color: white;
+    overflow-x: hidden;
+
+    
 } 
 
 
+//ANCHOR start
+
 body{
+
+    background: linear-gradient(0.5turn, #494949, #161616);
 
 
     section{
@@ -31,17 +48,22 @@ body{
         
         width: 100vw;
         height: 100vh;
-        background-color: rgb(68, 68, 68);
+
 
 
         .app-wrapper{
 
 
             width: 85vw;
-            height: 85vh;
-            background-color: antiquewhite;
+            min-width: 950px;
+            max-width: 1250px;
+            height: 90vh;
+
             position: relative;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.253);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.453);
+
+            display: flex;
+            flex-direction: column;
 
 
 
@@ -53,81 +75,477 @@ body{
                 position: relative;
 
                 display: flex;
-                justify-content: space-around;
                 flex-direction: row;
 
                 .app-container-left{
 
                     max-width: 240px;
                     min-width: 240px;
-                    height: 100%;
-                    left: 0;
 
-                   background-color: black;
+                    position: relative;
+
+                    display: flex;
+                    flex-direction: column;
+
+
+                    background-color: black;
 
 
                    .left-links{
 
-                    margin: 20px;
-
-                    p{
-
-                        margin-bottom: 10px;
+                        margin: 5px 0 0 20px;
+                        min-height: min-content;
+                        flex: 0 0 auto;
                         
+
+
+
+                        h1{
+
+
+                            font-family: 'Raleway', sans-serif;
+                            font-size: 1.3rem;
+                            font-weight: 900;
+                            margin-bottom: 10px;
+                            margin-left: 2px;
+                            cursor: poi;
+
+
+
+
+                        }
+
+                        ul{
+
+                            li{
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                margin: 5px 0;
+
+                                font-size: 0.8rem;
+
+                                opacity: 0.7;
+                                transition: 0.2s;
+
+                                &:hover{
+                                    opacity: 1;
+                                }
+
+                                img{
+                                    height: 32px;
+
+
+                                }
+
+                                p{
+                                    margin-left: 7px;
+                                }
+
+                            }
+                        }
+
+
+                        p{
+                            font-weight: 700;
+
+
+                            
+                        }
+
+
                     }
-
-
-                   }
 
                    .left-playlists{
 
-                    margin: 20px;
+                        margin-left: 20px;
+                        border-top: solid 1px grey;
 
-                    border-top: solid 1px grey;
-                    overflow: auto;
+                        flex-grow: 1;
 
-                    &::-webkit-scrollbar-thumb {
-
-                    }
+                        overflow-y: auto;
 
 
-                    p{
-                        margin-top: 10px;
-                    }
 
+                        ul{
+                            li{
+
+                                margin-top: 20px;
+                                cursor: pointer;
+                                color: rgb(187, 187, 187);
+
+                                &:hover{
+                                    color: white;
+                                }
+    
+
+                                
+
+
+                            }
+                        }
+                        
+                        &::-webkit-scrollbar {
+                            width: 10px;
+                            height: 15px;
+                            background-color: #000;
+
+                        }
+
+
+                        &::-webkit-scrollbar-thumb {
+                            background: #aaa;
+
+                        }
                    }
 
-                   img{
+                   .img-container{
 
-                    width: 100%;
-                    height: 240px;
-                    background-color: aliceblue;
+                        display: inline-block;
+
+                        height: 240px;
+                        width: 240px;
+
+                        overflow: hidden;
 
 
+                        flex: 0 0 auto;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+
+                       
                    }
 
                 }
 
-                .app-container-center{
 
+                //ANCHOR Right container
+                .app-container-right{
+
+                    
                     width: 100%;
-                    height: 100%;
 
-                    
+                    position: relative;
+                 
+                    background-color: rgb(20, 20, 20);
 
-                   background-color: rgb(20, 20, 20);
+
+                    display: flex;
+                    flex-direction: column;
 
 
-                    
+
                    .upper-container{
 
-
                         width: 100%;
-                        height: 50px;
+                        height: 70px;
+
+                        position: absolute;
+                        top: 0;
+
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        background: linear-gradient(0.25turn, #e66465, #9198e5);
+
+
+                        .upper-wrapper{
+
+
+
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            flex-grow: 1;
+
+                            p{
+
+                                margin-left: 20px;
+
+                                width: 40px;
+                                height: 40px;
+
+                                border-radius: 20px;
+
+                                background-color: black;
+
+                                @include flxCenter();
+                            }
+
+
+                            img{
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 20px;
+                                border-radius: 20px;
+                            }
+
+                        }
+
+                        .window-btn{
+
+                            width: 150px;
+                            flex: 0 0 auto;
+
+                            display: flex;
+                            flex-direction: row;
+
+
+
+                            div{
+
+                                @include flxCenter();
+
+                                width: 50px;
+                                height: 30px;
+                                background-color: rgba(0, 0, 0, 0.7);
+
+
+
+
+                                img{
+
+                                    width: 50%;
+                                    height: 50%;
+                                    object-fit: contain;
+    
+    
+                                }
+
+                                &:hover{
+
+                                    background-color: rgba(83, 83, 83, 0.664);
+                                }
+
+                                &:last-child:hover{
+                                    background-color: rgba(233, 42, 29, 0.952) ;
+                                }
+    
+                            }
+
+
+                            
+                        }
 
 
 
                     }
+
+                    //ANCHOR center container
+                    
+                    .center-container{
+
+                        margin-top: 70px;
+                        flex: auto;
+
+                        //scrollbar
+                        &::-webkit-scrollbar {
+                            width: 10px;
+                            height: 15px;
+                            background-color: #000;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background: rgba(170, 170, 170, 0.562);
+                        }
+
+
+                        .center-banner{
+
+
+                            margin:20px;
+    
+                            background-color: antiquewhite;
+                            border-radius: 5px;
+                            height: 150px;
+    
+    
+                        }
+    
+                        h1{
+    
+    
+                            margin: 35px 0px 35px 20px;
+                            font-size: 1.7em;
+                            font-weight: 700;
+    
+    
+                        }
+    
+                        .recent-items{
+    
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            gap: 20px 20px;
+    
+                            margin: 20px;
+
+
+                            @media (min-width: 1400px){
+                                grid-template-columns: auto auto auto;
+                            }
+    
+    
+                            
+    
+    
+                            .recent-item{
+    
+                                min-width: 300px;
+                                height: 100px;
+    
+                                background-color: rgba(240, 248, 255, 0.200);
+                                border-radius: 5px;
+    
+    
+                                overflow: hidden;
+    
+                                display: flex;
+                                align-items: center;
+    
+                                position: relative;
+
+                                transition: 0.3s;
+                                
+
+                                &:hover{
+                                    background-color: rgba(240, 248, 255, 0.300);
+                                }
+    
+                                img{
+    
+                                    position: absolute;
+                                    width: 100px;
+                                    box-shadow: 5px 0px 10px rgba(54, 54, 54, 0.363);
+                                }
+    
+                                h3{
+                                    
+                                    font-weight: 400;
+                                    position: absolute;
+                                    left: 130px;
+    
+                                }
+    
+                            }
+    
+    
+    
+    
+                        }
+
+
+                        //ANCHOR Cards
+
+                        .cards-header{
+
+
+                            margin: 35px 0;
+
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+
+                            h2{
+
+                                font-size: 1.7em;
+                                font-weight: 700;
+                            }
+
+                            a{
+                                text-decoration: none;
+                                font-size: small;
+                                
+                                &:hover{
+                                    color: rgb(199, 199, 199);
+                                }
+
+                            }
+
+                            *{
+                                margin: 0px 20px;
+                            }
+                        }
+
+                        .cards-container{
+
+                            margin: 20px;
+
+                            display: grid;
+                            grid-template-columns: auto auto auto auto;
+                            column-gap: 20px;
+
+
+
+
+                            .card{
+
+                                max-width: 220px;
+                                max-height: 300px;
+                                min-height: 200px;
+                                background-color: rgba(240, 248, 255, 0.062);
+                                border-radius: 7px;
+                                
+                                padding: 15px;
+
+                                display: flex;
+                                flex-direction: column;
+
+                                transition: 0.5s;
+
+                                box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.332);
+
+
+                                    h4{
+                                        font-size: 1.2em;
+                                        font-weight: 700;
+                                    }
+
+                                    p{
+                                        color: rgb(136, 136, 136);
+                                    }
+
+                                    img{
+
+                                        
+                                        width: 100%;
+                                        border-radius: 100px;
+
+                                        margin-bottom: 20px;
+
+                                        box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.332);
+
+                                        display: inline;
+
+
+                                    }
+
+                                    .album{
+
+                                        border-radius: 5px;
+                                    }
+                                    
+                                
+                                    &:hover{
+                                        background-color: rgba(240, 248, 255, 0.178);
+                                    }
+
+
+
+                            }
+                        }
+
+                    }
+
+
 
                 }
 
@@ -135,16 +553,185 @@ body{
 
             }
 
-
+            //ANCHOR Footer
             .app-footer{
 
-                position: absolute;
-                bottom: 0;
-
-                width: 85vw;
-                height: 95px;
+                width: 100%;
+                height: 120px;
 
                 background-color: rgb(24, 24, 24);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+
+                
+
+
+
+                .current-song{
+
+                    width: 240px;
+
+                    .song-artist{
+
+                        font-weight: 200;
+                        font-size: 0.9em;
+
+                    }
+
+
+                    *{
+                        margin: auto auto 10px 20px;
+                        
+                    }
+
+                }
+
+                .playback{
+
+
+
+                    width: 40%;
+
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+
+
+
+                    .playback-controls{
+
+                        align-self: center;
+
+                        display: flex;
+                        align-items: center;
+
+
+
+
+                        img{
+
+                            opacity: 0.7;
+                            margin: auto 7px ;
+                            height: 25px;
+                            width: 25px;
+
+                            &:hover{
+                                opacity: 1;
+                            }
+                        }
+
+                        #play{
+                            opacity: 1;
+                            height: 40px;
+                            width: 40px;
+
+                            &:hover{  
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+
+                    .timeline{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        p{
+
+                            font-size: small;
+                        }
+
+                        .p-bar{
+
+                            flex: 1 0 auto;
+
+                            margin: 10px;
+
+                            height: 5px;
+                            position: relative;
+                            background-color: rgb(88, 88, 88);
+                            border-radius: 10px;
+
+                            .p-bar-progress{
+                                position: absolute;
+                                width: 65%;
+                                height: 5px;
+                                background-color: rgb(219, 219, 219);
+                                border-radius: 10px;
+
+                            }
+
+                        }
+                    }
+
+
+
+
+
+                }
+
+
+
+
+                
+                .extra-controls{
+
+
+
+                    min-width: 200px;
+                    width: 20%;
+                    margin-right: 20px;
+
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    img{
+
+                        object-fit: contain;
+                        width: 23px;
+                        height: 23px;
+                        margin-left: 10px;
+                        opacity: 0.7;
+
+                        &:hover{
+                            opacity: 1;
+                        }
+
+                    }
+
+
+                    .volume-bar-container{
+
+                        flex: 1 0 auto;
+
+                        margin: 5px;
+
+                        height: 4px;
+                        width: 40%;
+
+                        position: relative;
+                        background-color: rgb(88, 88, 88);
+                        border-radius: 10px;
+
+
+                        .volume-bar{
+
+                            position: absolute;
+                            width: 50%;
+                            height: 4px;
+                            background-color: aliceblue;
+
+                        }
+                    }
+
+
+
+                }
 
 
             }
@@ -154,10 +741,18 @@ body{
 
         }
 
-
+        #credits{
+            font-size: small;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
 
 
     }
 
 
 }
+
+
+
