@@ -35,20 +35,35 @@
 } 
 
 
+$base-color: #e66465 ;
+
+$secondary-color:#da4545 ;
+
+$bg0 : #181818;
+$bg1 : #3a1130;
+$bg2 : #1f2136;
+
+
+
 //ANCHOR start
 
 body{
 
-    background: linear-gradient(0.5turn, #494949, #161616);
 
 
     section{
+
+        
 
         @include flxCenter();
         
         width: 100vw;
         height: 100vh;
 
+
+        background-color: #7a7a7a;
+        background-image: radial-gradient(#747474 1.35px, #302f2f 1.35px);
+        background-size: 27px 27px;
 
 
         .app-wrapper{
@@ -66,7 +81,6 @@ body{
             flex-direction: column;
 
 
-
             .main-container{
 
                 border: solid 1px black;
@@ -76,6 +90,9 @@ body{
 
                 display: flex;
                 flex-direction: row;
+
+
+
 
                 .app-container-left{
 
@@ -108,7 +125,7 @@ body{
                             font-weight: 900;
                             margin-bottom: 10px;
                             margin-left: 2px;
-                            cursor: poi;
+                            cursor: pointer;
 
 
 
@@ -127,6 +144,8 @@ body{
 
                                 opacity: 0.7;
                                 transition: 0.2s;
+
+                                cursor: pointer;
 
                                 &:hover{
                                     opacity: 1;
@@ -183,6 +202,10 @@ body{
 
 
                             }
+
+                            &:last-child{
+                                margin-bottom: 20px;
+                            }
                         }
                         
                         &::-webkit-scrollbar {
@@ -207,7 +230,6 @@ body{
                         width: 240px;
 
                         overflow: hidden;
-
 
                         flex: 0 0 auto;
 
@@ -252,7 +274,7 @@ body{
                         flex-direction: row;
                         justify-content: space-between;
 
-                        background: linear-gradient(0.25turn, #e66465, #9198e5);
+                        background: linear-gradient(0.15turn, $base-color 50%, $secondary-color 100%);
 
 
                         .upper-wrapper{
@@ -296,6 +318,8 @@ body{
 
                             display: flex;
                             flex-direction: row;
+
+                            cursor: pointer;
 
 
 
@@ -344,6 +368,7 @@ body{
 
                         margin-top: 70px;
                         flex: auto;
+                        
 
                         //scrollbar
                         &::-webkit-scrollbar {
@@ -387,6 +412,7 @@ body{
                             margin: 20px;
 
 
+
                             @media (min-width: 1400px){
                                 grid-template-columns: auto auto auto;
                             }
@@ -400,7 +426,7 @@ body{
                                 min-width: 300px;
                                 height: 100px;
     
-                                background-color: rgba(240, 248, 255, 0.200);
+                                background-color: rgba(240, 248, 255, 0.103);
                                 border-radius: 5px;
     
     
@@ -411,7 +437,12 @@ body{
     
                                 position: relative;
 
-                                transition: 0.3s;
+                                transition: 200ms;
+
+                                cursor: pointer;
+
+
+
                                 
 
                                 &:hover{
@@ -432,6 +463,23 @@ body{
                                     left: 130px;
     
                                 }
+
+                                div{
+
+
+                                    width: 100px;
+                                    height: 100px;
+                                    background: linear-gradient(0.2turn,$bg1, $bg2);
+
+                                    @include flxCenter();
+                                    
+                                    img{
+                                        width: 50px;
+                                        height: 50px;
+                                        box-shadow: none;
+                                    }
+
+                                }
     
                             }
     
@@ -446,7 +494,7 @@ body{
                         .cards-header{
 
 
-                            margin: 35px 0;
+                            margin: 35px 0 20px 0;
 
                             width: 100%;
                             display: flex;
@@ -483,6 +531,9 @@ body{
                             grid-template-columns: auto auto auto auto;
                             column-gap: 20px;
 
+                            overflow: visible;
+
+                            position: relative;
 
 
 
@@ -493,6 +544,7 @@ body{
                                 min-height: 200px;
                                 background-color: rgba(240, 248, 255, 0.062);
                                 border-radius: 7px;
+                                position: relative;
                                 
                                 padding: 15px;
 
@@ -503,6 +555,8 @@ body{
 
                                 box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.332);
 
+                                overflow: visible;
+                                cursor: pointer;
 
                                     h4{
                                         font-size: 1.2em;
@@ -514,7 +568,6 @@ body{
                                     }
 
                                     img{
-
                                         
                                         width: 100%;
                                         border-radius: 100px;
@@ -524,7 +577,6 @@ body{
                                         box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.332);
 
                                         display: inline;
-
 
                                     }
 
@@ -536,6 +588,38 @@ body{
                                 
                                     &:hover{
                                         background-color: rgba(240, 248, 255, 0.178);
+                                        transform: translateY(-4px);
+
+                                        &:after{
+
+                                            transform :scale(1);
+                                        }
+
+                                    }
+
+
+                                    &:after{
+
+                                        content: url(./imgs/icons8-play-30.png);
+
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-around;
+
+                                        transform :scale(0);
+
+                                        transition: 300ms;
+                                        
+                                        position: absolute;
+                                        bottom: 40%;
+                                        right: 10px;
+
+                                        width: 50px;
+                                        height: 50px;
+                                        border-radius: 30px;
+                                        background-color: $base-color;
+
+
                                     }
 
 
@@ -608,7 +692,7 @@ body{
                         display: flex;
                         align-items: center;
 
-
+                        cursor: pointer;
 
 
                         img{
@@ -627,6 +711,7 @@ body{
                             opacity: 1;
                             height: 40px;
                             width: 40px;
+                            
 
                             &:hover{  
                                 opacity: 0.7;
@@ -643,6 +728,10 @@ body{
 
                             font-size: small;
                         }
+
+
+
+                        
 
                         .p-bar{
 
@@ -661,6 +750,13 @@ body{
                                 height: 5px;
                                 background-color: rgb(219, 219, 219);
                                 border-radius: 10px;
+
+                                transition: 200ms;
+
+                                &:hover{
+                                    background-color: $base-color;
+                            }
+                                
 
                             }
 
@@ -698,6 +794,8 @@ body{
                         margin-left: 10px;
                         opacity: 0.7;
 
+                        cursor: pointer;
+
                         &:hover{
                             opacity: 1;
                         }
@@ -725,6 +823,13 @@ body{
                             width: 50%;
                             height: 4px;
                             background-color: aliceblue;
+
+
+                            transition: 200ms;
+
+                            &:hover{
+                                background-color: $base-color;
+                            }
 
                         }
                     }

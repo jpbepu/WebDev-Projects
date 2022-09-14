@@ -10,15 +10,15 @@
   overflow-x: hidden;
 }
 
-body {
-  background: linear-gradient(0.5turn, #494949, #161616);
-}
 body section {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  background-color: #7a7a7a;
+  background-image: radial-gradient(#747474 1.35px, #302f2f 1.35px);
+  background-size: 27px 27px;
 }
 body section .app-wrapper {
   width: 85vw;
@@ -59,7 +59,7 @@ body section .app-wrapper .main-container .app-container-left .left-links h1 {
   font-weight: 900;
   margin-bottom: 10px;
   margin-left: 2px;
-  cursor: poi;
+  cursor: pointer;
 }
 body section .app-wrapper .main-container .app-container-left .left-links ul li {
   display: flex;
@@ -69,6 +69,7 @@ body section .app-wrapper .main-container .app-container-left .left-links ul li 
   font-size: 0.8rem;
   opacity: 0.7;
   transition: 0.2s;
+  cursor: pointer;
 }
 body section .app-wrapper .main-container .app-container-left .left-links ul li:hover {
   opacity: 1;
@@ -95,6 +96,9 @@ body section .app-wrapper .main-container .app-container-left .left-playlists ul
 }
 body section .app-wrapper .main-container .app-container-left .left-playlists ul li:hover {
   color: white;
+}
+body section .app-wrapper .main-container .app-container-left .left-playlists ul:last-child {
+  margin-bottom: 20px;
 }
 body section .app-wrapper .main-container .app-container-left .left-playlists::-webkit-scrollbar {
   width: 10px;
@@ -132,7 +136,7 @@ body section .app-wrapper .main-container .app-container-right .upper-container 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: linear-gradient(0.25turn, #e66465, #9198e5);
+  background: linear-gradient(0.15turn, #e66465 50%, #da4545 100%);
 }
 body section .app-wrapper .main-container .app-container-right .upper-container .upper-wrapper {
   display: flex;
@@ -161,6 +165,7 @@ body section .app-wrapper .main-container .app-container-right .upper-container 
   flex: 0 0 auto;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 body section .app-wrapper .main-container .app-container-right .upper-container .window-btn div {
   display: flex;
@@ -219,13 +224,14 @@ body section .app-wrapper .main-container .app-container-right .center-container
 body section .app-wrapper .main-container .app-container-right .center-container .recent-items .recent-item {
   min-width: 300px;
   height: 100px;
-  background-color: rgba(240, 248, 255, 0.2);
+  background-color: rgba(240, 248, 255, 0.103);
   border-radius: 5px;
   overflow: hidden;
   display: flex;
   align-items: center;
   position: relative;
-  transition: 0.3s;
+  transition: 200ms;
+  cursor: pointer;
 }
 body section .app-wrapper .main-container .app-container-right .center-container .recent-items .recent-item:hover {
   background-color: rgba(240, 248, 255, 0.3);
@@ -240,8 +246,21 @@ body section .app-wrapper .main-container .app-container-right .center-container
   position: absolute;
   left: 130px;
 }
+body section .app-wrapper .main-container .app-container-right .center-container .recent-items .recent-item div {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(0.2turn, #3a1130, #1f2136);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body section .app-wrapper .main-container .app-container-right .center-container .recent-items .recent-item div img {
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+}
 body section .app-wrapper .main-container .app-container-right .center-container .cards-header {
-  margin: 35px 0;
+  margin: 35px 0 20px 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -267,6 +286,8 @@ body section .app-wrapper .main-container .app-container-right .center-container
   grid-template-columns: auto auto auto auto;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  overflow: visible;
+  position: relative;
 }
 body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card {
   max-width: 220px;
@@ -274,11 +295,14 @@ body section .app-wrapper .main-container .app-container-right .center-container
   min-height: 200px;
   background-color: rgba(240, 248, 255, 0.062);
   border-radius: 7px;
+  position: relative;
   padding: 15px;
   display: flex;
   flex-direction: column;
   transition: 0.5s;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.332);
+  overflow: visible;
+  cursor: pointer;
 }
 body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card h4 {
   font-size: 1.2em;
@@ -299,6 +323,25 @@ body section .app-wrapper .main-container .app-container-right .center-container
 }
 body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card:hover {
   background-color: rgba(240, 248, 255, 0.178);
+  transform: translateY(-4px);
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card:hover:after {
+  transform: scale(1);
+}
+body section .app-wrapper .main-container .app-container-right .center-container .cards-container .card:after {
+  content: url(./imgs/icons8-play-30.png);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform: scale(0);
+  transition: 300ms;
+  position: absolute;
+  bottom: 40%;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #e66465;
 }
 body section .app-wrapper .app-footer {
   width: 100%;
@@ -329,6 +372,7 @@ body section .app-wrapper .app-footer .playback .playback-controls {
   align-self: center;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 body section .app-wrapper .app-footer .playback .playback-controls img {
   opacity: 0.7;
@@ -369,6 +413,10 @@ body section .app-wrapper .app-footer .playback .timeline .p-bar .p-bar-progress
   height: 5px;
   background-color: rgb(219, 219, 219);
   border-radius: 10px;
+  transition: 200ms;
+}
+body section .app-wrapper .app-footer .playback .timeline .p-bar .p-bar-progress:hover {
+  background-color: #e66465;
 }
 body section .app-wrapper .app-footer .extra-controls {
   min-width: 200px;
@@ -385,6 +433,7 @@ body section .app-wrapper .app-footer .extra-controls img {
   height: 23px;
   margin-left: 10px;
   opacity: 0.7;
+  cursor: pointer;
 }
 body section .app-wrapper .app-footer .extra-controls img:hover {
   opacity: 1;
@@ -403,6 +452,10 @@ body section .app-wrapper .app-footer .extra-controls .volume-bar-container .vol
   width: 50%;
   height: 4px;
   background-color: aliceblue;
+  transition: 200ms;
+}
+body section .app-wrapper .app-footer .extra-controls .volume-bar-container .volume-bar:hover {
+  background-color: #e66465;
 }
 body section #credits {
   font-size: small;
