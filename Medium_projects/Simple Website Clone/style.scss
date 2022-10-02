@@ -1,40 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+Mono:100,200,300,regular,500,600,700,800,900);
+@import './partial.scss';
 
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 
 body{
+    background: rgb(61, 61, 61);
 
     header{
 
-        width: 100vw;
-        height: 30vh;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
 
-        ul{
-            display: inline-block;
+        justify-content: center;
+        
+        width: 100vw;
+        height: 10vh;
+        background-color: rgb(32, 33, 34);
+        padding: 10px;
 
-            li{
+        
 
-                
+
+            div{
+
+                @include flexRow();
+                align-items: center;
+                justify-content: space-between;
+
+                width: 90%;
+
+
+
+                    ul{
+
+                        @include flexRow();
+
+        
+                        li{
+
+                            margin-left: 40px;
+                            list-style-type: none;
+                            
+                        }
+                    }
+
+            }
+        
+    }
+
+    .main{
+
+        @include flexCenter();
+        @include block();
+
+
+        h1{
+            font-size: 2em;
+        }
+
+
+    }
+
+    .services{
+
+        @include flexCenter();
+        @include block();
+
+
+        div{
+            img{}
+            h1{}
+            a{}
+        }
+    }
+
+    .about{
+
+        @include flexCenter();
+        @include block();
+
+
+        .about-upper-wrapper{
+            h1{}
+            p{}
+            img{}
+        }
+        .about-lower-wrapper{
+            div{
+                h1{}
+                p{}
             }
         }
     }
 
-    section{
+    .highlight{
+
+        @include flexCenter();
+        @include block();
 
 
-
-
-
+        img{}
+        div{
+            h1{}
+            p{}
+        }
     }
 
+    .contact{
+
+        @include flexCenter();
+        @include block();
 
 
+        h1{}
+        form{
+            input{}
+            button{}
+        }
+
+    }
 }

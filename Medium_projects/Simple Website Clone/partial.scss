@@ -1,0 +1,30 @@
+@mixin flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin block {
+    height: 60vh;
+    width: 100vw;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Noto', sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+    color: aliceblue
+
+}
