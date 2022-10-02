@@ -92,52 +92,6 @@ for (let i = 0; i < buttons.length; i++) {
         }
 
         
-        // switch(parseInt(buttons[i].innerText)) {
-
-        //     case 1:
-        //       firstDigit = 1
-        //     break;
-
-        //     case 2:
-        //       // code block
-        //     break;
-
-        //     case 3:
-        //     // code block
-        //     break;
-
-        //     case 4:
-
-        //         // code block
-        //     break;
-
-        //     case 5:
-        //         // code block
-        //     break;
-
-        //     case 6:
-        //         // code block
-        //     break;
-
-        //     case 7:
-        //         // code block
-        //     break;
-
-        //     case 8:
-        //         // code block
-        //     break;
-
-        //     case 9:
-        //         // code block
-        //     break;
-
-        //     case 0:
-        //         // code block
-        //     break;
-
-        //     default:
-        //       // code block
-        //   }
     
     })
 
