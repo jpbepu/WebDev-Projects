@@ -2,9 +2,9 @@
 
 ### Designer Gráfico, Programador e Ilustrador.
 
-### Tenho um interesse enorme por arte e tudo o que envolve código!
+### Tenho um interesse enorme por engenharia de desenvolvimento e tudo o que envolva arte!
 
-### Atualmente estou desenvolvendo alguns projetos pessoais na área de front-end.
+### Atualmente desenvolvendo alguns projetos pessoais na área de front-end para compor meu portfolio.
 
 
 
