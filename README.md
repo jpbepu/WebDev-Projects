@@ -1,10 +1,10 @@
 # Olá, prazer!🦞<br>Meu nome é <strong>João Pedro Bepu!</strong> 
 
-### Designer Gráfico, Programador e Ilustrador.
+### Designer Gráfico e Desenvolvedor Front-end.
 
-### Tenho um interesse enorme por arte e tudo o que envolve código!
+### Tenho um interesse enorme por desenvolvimento web e tudo o que envolva arte!
 
-### Atualmente estou desenvolvendo alguns projetos pessoais na área de front-end.
+### Atualmente trabalhando em alguns projetos pessoais na área de front-end para compor meu portfolio.
 
 
 
